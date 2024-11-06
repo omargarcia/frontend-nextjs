@@ -31,6 +31,7 @@ export async function deleteProduct(id:string) {
     const res = await fetch(`${BACKEND_URL}/api/products/${id}`,{
         method:"DELETE"
     })
+    console.log(res);
 }
 
 export async function updateProduct(id:string, newProduct:any){
