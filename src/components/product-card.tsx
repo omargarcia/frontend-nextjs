@@ -20,9 +20,9 @@ async function handleRemoveProduct(id:any){
               <span className='text-sm font-bold text-gray-500'>${product.price}</span>
             </CardTitle>
           </CardHeader>
-          <img className='min-h-80' src={product.image} alt="" />
+          <img className='min-h-80' src={product.image || 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930'} alt="" />
           <CardContent>
-            <p>{product.description}</p>
+            <p className='mt-5'>{product.description}</p>
             
           </CardContent>
           <CardFooter className='flex justify-between'>

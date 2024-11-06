@@ -14,19 +14,19 @@ async function ProductDetailPage({params}:Props) {
 
 console.log(product)
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className="h-screen mt-5 mx-auto max-w-[590px]">
         <Card>
             <CardHeader>
                 <CardTitle className="flex justify-between">
                     Product Detail: {product.id}
-                    <Link className={buttonVariants()} href="/">Go back</Link>
+                    <Link className={buttonVariants()} href="/"><span className="font-black">&#x2190;</span></Link>
                 </CardTitle>
             </CardHeader>
             <CardContent>
                 <h1>{product.name}</h1>
                 <p>{product.description}</p>
                 <p>${product.price}</p>
-                <img className="w-full h-64 object-cover" src={product.image} alt=""/>
+                <img className="w-full  object-cover" src={product.image || 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930'} alt=""/>
             </CardContent>
         </Card>
     </div>

@@ -14,7 +14,7 @@ const products = await getProducts();
   return(
     <>
     <div className='flex justify-between'>
-      <h1 className='text-4xl font-bold'>CRUD APP NEXT - NEST</h1>
+      <h1 className='text-4xl font-bold'>ADMIN STORE</h1>
       <Link href="/products/new" className={buttonVariants()}>Create Product</Link> 
      
     </div>
