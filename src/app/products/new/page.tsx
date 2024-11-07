@@ -9,7 +9,7 @@ interface Props {
     id: string
   }
 }
-async function ProductsNewPage({ params }: Props) {
+async function ProductsNewPage({ params }: any) {
 
   const { id } = await params
   const product = await getProduct(id);
