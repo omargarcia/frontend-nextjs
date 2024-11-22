@@ -2,12 +2,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getProduct } from "../products.api"
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import Image from "next/image";
 
-interface Props {
-    params: {
-        id: string
-    }
-}
+// interface Props {
+//     params: {
+//         id: string
+//     }
+// }
 
 async function ProductDetailPage({ params }: any) {
     const product = await getProduct(params.id);
@@ -26,7 +27,7 @@ async function ProductDetailPage({ params }: any) {
                     <h1>{product.name}</h1>
                     <p>{product.description}</p>
                     <p>${product.price}</p>
-                    <img className="w-full  object-cover" src={product.image || 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930'} alt="" />
+                    <Image className="w-full  object-cover" src={product.image || 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930'} alt="" />
                 </CardContent>
             </Card>
         </div>

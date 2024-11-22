@@ -14,6 +14,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import Image from 'next/image';
 export function ProductCard({ product }: any) {
 
   const router = useRouter();
@@ -31,7 +32,7 @@ export function ProductCard({ product }: any) {
           <span className='text-sm font-bold text-gray-500'>${product.price}</span>
         </CardTitle>
       </CardHeader>
-      <img className='min-h-80' src={product.image || 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930'} alt="" />
+      <Image className='min-h-80' src={product.image || 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930'} alt="" />
       <CardContent>
         <p className='mt-5'>{product.description}</p>
 

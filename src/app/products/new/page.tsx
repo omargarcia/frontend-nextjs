@@ -4,11 +4,11 @@ import { getProduct } from "../products.api"
 import { buttonVariants } from "@/components/ui/button"
 import Link from "next/link"
 
-interface Props {
-  params: {
-    id: string
-  }
-}
+// interface Props {
+//   params: {
+//     id: string
+//   }
+// }
 async function ProductsNewPage({ params }: any) {
 
   const { id } = await params
