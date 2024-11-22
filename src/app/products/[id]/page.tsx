@@ -10,7 +10,7 @@ import Image from "next/image";
 //     }
 // }
 
-async function ProductDetailPage({ params }: any) {
+export default async function ProductDetailPage({ params }: any) {
     const product = await getProduct(params.id);
 
     console.log(product)
@@ -33,5 +33,3 @@ async function ProductDetailPage({ params }: any) {
         </div>
     )
 }
-
-export default ProductDetailPage

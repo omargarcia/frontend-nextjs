@@ -9,7 +9,7 @@ import Link from "next/link"
 //     id: string
 //   }
 // }
-async function ProductsNewPage({ params }: any) {
+export default async function ProductsNewPage({ params }: any) {
 
   const { id } = await params
   const product = await getProduct(id);
@@ -31,5 +31,3 @@ async function ProductsNewPage({ params }: any) {
     </div>
   )
 }
-
-export default ProductsNewPage
