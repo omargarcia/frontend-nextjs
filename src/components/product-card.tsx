@@ -32,7 +32,7 @@ export function ProductCard({ product }: any) {
           <span className='text-sm font-bold text-gray-500'>${product.price}</span>
         </CardTitle>
       </CardHeader>
-      <Image className='min-h-80' src={product.image || 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930'} alt="" width="300" height="300" />
+      <Image className='min-h-80' src={product.image || 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930'} alt="" width="400" height="400" />
       <CardContent>
         <p className='mt-5'>{product.description}</p>
 
